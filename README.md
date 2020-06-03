@@ -11,9 +11,17 @@
 e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 5. If the date string is **invalid** the api returns a JSON having the structure `{"error" : "Invalid Date" }`.
 
+### Demo App
+
+A demo app can be found at the link below. It is implemented in Node.js and Express. A set of basic tests can be found at `tests/tests.js` in this repo.
+
+* https://akoz002-nodejs-timestamp.herokuapp.com/
+
+Project template and requirements provided by freeCodeCamp (FCC). Tests and app implementation by Alex Kozlov (akoz002).
+
 #### Example usage:
-* https://curse-arrow.glitch.me/api/timestamp/2015-12-25
-* https://curse-arrow.glitch.me/api/timestamp/1451001600000
+* https://akoz002-nodejs-timestamp.herokuapp.com/api/timestamp/2015-12-25
+* https://akoz002-nodejs-timestamp.herokuapp.com/api/timestamp/1451001600000
 
 #### Example output:
 * {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
