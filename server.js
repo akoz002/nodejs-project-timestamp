@@ -33,7 +33,11 @@ app.get("/api/timestamp/:date_string?", function (req, res) {
 
   // isNaN() converts to Number and then checks the result for NaN
   let date;
-  if (isNaN(req.params.date_string)) {
+  if (req.params.date_string === undefined) {
+    // use the current time
+    date = new Date();
+  }
+  else if (isNaN(req.params.date_string)) {
     // it's a string
     date = new Date(req.params.date_string);
   }
@@ -42,6 +46,7 @@ app.get("/api/timestamp/:date_string?", function (req, res) {
     date = new Date(Number(req.params.date_string));
   }
 
+  // compose the response JSON
   if (date.toUTCString() === "Invalid Date") {
     res.json({ error: "Invalid Date" });
   }
