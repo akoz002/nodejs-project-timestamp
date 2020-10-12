@@ -13,7 +13,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 
 ### Demo App
 
-A demo app can be found at the link below. It is implemented in Node.js and Express. A set of basic tests can be found at `tests/tests.js` in this repo.
+A demo app can be found at the link below. It is implemented in Node.js and Express. At the frontend it contains a simple React component for fetching and displaying the timestamp. React source can be found at `views/js/`. A set of basic tests can be found at `tests/tests.js`.
 
 * https://akoz002-nodejs-timestamp.herokuapp.com/
 
@@ -24,4 +24,4 @@ Project template and requirements provided by freeCodeCamp (FCC). Tests and app 
 * https://akoz002-nodejs-timestamp.herokuapp.com/api/timestamp/1451001600000
 
 #### Example output:
-* {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+* { "unix": 1451001600000, "utc": "Fri, 25 Dec 2015 00:00:00 GMT" }
