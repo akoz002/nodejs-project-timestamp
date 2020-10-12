@@ -7,10 +7,12 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-react-app": "^3.1.2",
 		"cors": "^2.8.0",
 		"dotenv": "^8.2.0",
 		"express": "^4.12.4",
-		"node-fetch": "^2.6.0"
+		"node-fetch": "^2.6.1"
 	},
 	"repository": {
 		"type": "git",

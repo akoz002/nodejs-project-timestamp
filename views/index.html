@@ -21,32 +21,41 @@
           Note that the unix timestamp needs to be an <strong>integer</strong> (not a string) specifying <strong>milliseconds</strong>.<br>
           In our test we will use date strings compliant with ISO-8601 (e.g. <code>"2016-11-20"</code>) because this will ensure an UTC timestamp.</li>
           <li>If the date string is <strong>empty</strong> it should be equivalent to trigger <code>new Date()</code>, i.e. the service uses the current timestamp.</li>
-          <li>If the date string is <strong>valid</strong> the api returns a JSON having the structure<br><code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }</code><br>
-            e.g. <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+          <li>If the date string is <strong>valid</strong> the api returns a JSON having the structure<br><code>{ "unix": &lt;date.getTime()&gt;, "utc": &lt;date.toUTCString()&gt; }</code><br>
+            e.g. <code>{ "unix": 1479663089000, "utc": "Sun, 20 Nov 2016 17:31:29 GMT" }</code></li>
           <li>If the date string is <strong>invalid</strong> the api returns a JSON having the structure <br>
-              <code>{"error" : "Invalid Date" }</code>.
+              <code>{ "error": "Invalid Date" }</code>.
           </li>
         </ol>
 
         <h3>Example Usage:</h3>
         <ul>
-          <li><a href="api/timestamp/2015-12-25">[project url]/api/timestamp/2015-12-25</a></li>
-          <li><a href="api/timestamp/1451001600000">[project url]/api/timestamp/1451001600000</a></li>
+          <li><a href="api/timestamp/2015-12-25" target="_blank">[project url]/api/timestamp/2015-12-25</a></li>
+          <li><a href="api/timestamp/1451001600000" target="_blank">[project url]/api/timestamp/1451001600000</a></li>
         </ul>
 
         <h3>Example Output:</h3>
         <p>
-          <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+          <code>{ "unix": 1451001600000, "utc": "Fri, 25 Dec 2015 00:00:00 GMT" }</code>
         </p>
+
+        <!-- React component for displaying the timestamp. -->
+        <div id="timestamp-display"></div>
+
       </div>
       <div class="footer">
         <p>
-          Project template and requirements by <a href="https://www.freecodecamp.org/">freeCodeCamp</a>
-        </p>
-        <p>
-          Implemented by Alex Kozlov
+          Project template and requirements by <a href="https://www.freecodecamp.org/">freeCodeCamp</a>, implemented by Alex Kozlov
         </p>
       </div>
+
+      <!-- Load React. -->
+      <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+
+      <!-- Load React component. -->
+      <script src="timestampDisplay.js"></script>
+
    </body>
 
 </html>
