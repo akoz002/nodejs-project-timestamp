@@ -22,7 +22,7 @@ app.use(express.static('public'));
 
 // serve 'index.html' at the root path
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 /*

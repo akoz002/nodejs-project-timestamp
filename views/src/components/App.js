@@ -1,10 +1,11 @@
-'use strict';
+
+import React from 'react';
 
 /*
  * A simple React component to fetch and display the timestamp.
  */
 
-class TimestampDisplay extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -49,8 +50,3 @@ class TimestampDisplay extends React.Component {
     );
   }
 }
-
-ReactDOM.render(
-  <TimestampDisplay />,
-  document.getElementById('timestamp-display')
-);
