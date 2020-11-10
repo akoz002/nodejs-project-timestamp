@@ -13,7 +13,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 
 ### Demo App
 
-A demo app can be found at the link below. At the backend it is implemented in *Node.js* and *Express*. The server source can be found in `server.js`. At the frontend the app contains a *React* component for fetching and displaying the timestamp. React source can be found at `views/src/`, and it was built with *Parcel*. A set of basic tests can be found at `tests/tests.js`.
+A demo app can be found at the link below. At the backend it is implemented in *Node.js* and *Express*. The server source can be found in `server.js`. At the frontend the app contains a *React* component for fetching and displaying the timestamp. React source can be found at `views/src/`, and it was built with *Parcel*. Source maps were generated and the original source can be viewed in browser developer tools. A set of basic tests can be found at `tests/tests.js`.
 
 * https://akoz002-nodejs-timestamp.herokuapp.com/
 
