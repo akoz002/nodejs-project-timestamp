@@ -5,7 +5,7 @@ import React from 'react';
  * A simple React component to fetch and display the timestamp.
  */
 
-export default class App extends React.Component {
+export default class TimestampDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

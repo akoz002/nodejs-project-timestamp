@@ -2,9 +2,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import TimestampDisplay from './components/TimestampDisplay';
 
 ReactDOM.render(
-  <App />,
+  <TimestampDisplay />,
   document.getElementById('timestamp-display')
 );
