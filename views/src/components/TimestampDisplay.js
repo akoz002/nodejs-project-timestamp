@@ -84,7 +84,7 @@ export default class TimestampDisplay extends React.Component {
     return (
       <form onSubmit={this.getTimestamp}>
         <div className='input-container'>
-          <label for="date-string">Date string:</label>
+          <label htmlFor="date-string">Date string:</label>
           <input id="date-string" type="text" value={this.state.input}
             onChange={this.handleChange}
             placeholder="Enter date string..."
