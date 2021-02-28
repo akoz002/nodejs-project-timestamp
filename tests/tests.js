@@ -7,6 +7,8 @@ const assert = require('assert');
 const fetch = require('node-fetch');
 require('dotenv').config();
 
+const APP_URL = process.env.APP_URL || 'http://localhost:3000/api/timestamp/';
+
 /*
  * Validator functions for the JSON response.
  */
@@ -41,7 +43,7 @@ const validateRequest = (
   dateString,
   expectedJSON,
   validatorFunc = validateEqual
-) => fetch(process.env.APP_URL + dateString)
+) => fetch(APP_URL + dateString)
   .then(response => response.json())
   .then(json => validatorFunc(dateString, json, expectedJSON));
 
@@ -50,7 +52,7 @@ const validateRequest = (
  */
 
 async function runTests() {
-  console.log(`Running tests on app URL: '${process.env.APP_URL}'`);
+  console.log(`Running tests on app URL: '${APP_URL}'\n`);
 
   await validateRequest('2015-12-25', {
    unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT"

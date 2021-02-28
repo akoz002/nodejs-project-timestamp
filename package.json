@@ -5,6 +5,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
+		"test": "node tests/tests.js",
 		"build": "rm -fr public && parcel build views/src/index.html -d public",
 		"parcel": "parcel watch views/src/index.html -d public"
 	},
